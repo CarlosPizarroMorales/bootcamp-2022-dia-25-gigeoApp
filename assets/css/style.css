@@ -1,0 +1,125 @@
+@media screen and (min-width: 320px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 2rem; */
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* mini reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .navbar {
+  width: 88%;
+  padding: 0;
+  margin: 0.5rem auto 0.25rem;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.hero__banner {
+  height: 22vh;
+  overflow: hidden;
+  position: relative;
+}
+
+header img {
+  width: 100%;
+  position: absolute;
+  top: -380px;
+}
+
+.profile {
+  height: 5rem;
+  width: 88%;
+  margin: 0.3rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile__img,
+.profile__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile__img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile__img img {
+  height: 100%;
+}
+
+.profile__text {
+  margin-left: 1.5rem;
+}
+.profile__text p {
+  margin: 0;
+}
+
+.profile__text--name {
+  font-size: 1.5rem;
+  font-weight: bold; 
+  line-height: 1.5rem;
+}
+
+.profile__text--followers {
+  color: rgba(0,0,0,0.5)
+}
+
+.separador {
+  margin-top: 0.1rem;
+  opacity: 0.125;
+}
+
+.section__videos {
+  width: 88%;
+  margin: 2rem auto 0;
+}
+
+.section__videos h4 {
+  margin-bottom: 2rem;
+}
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+.card {
+  border: none; /* grid aplica default border */
+}
+
+.card__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.card__text {
+  color: rgba(0,0,0,0.6)}
+
+
