@@ -1,165 +1,75 @@
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr; /* WOOOOT */
-    gap: 2rem;
-    row-gap: 0.5rem;
+/** he elegido usar un template de 12
+ ** columnas, para poder utilizar
+ ** span de 3, 4, 6 y 12 columnas
+ ** más simple y menos intensivo para el
+ ** browser sería usar repeat(4, 1fr) pero
+ ** entonces no podría crear 3 columnas visuales */
+
+.container__grid-no-bootstrap {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@media (min-width: 1600px){
+  .card-grid {
+    grid-column: span 3;
   }
 }
-@media screen and (min-width: 320px) {
-  .container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* WOOOOOOT */
-    /* gap: 2rem; */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .card-grid {
+    grid-column: span 4;
   }
 }
 
-/* mini reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card-grid {
+    grid-column: span 6;
+  }
 }
 
-header .navbar {
-  width: 88%;
-  padding: 0;
-  margin: 0.5rem auto 0.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (max-width: 767px) {
+  .card-grid {
+    grid-column: span 12;
+  }
 }
 
-header h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
+.navbar-brand {
+  font-family: 'LEMON MILK', sans-serif;
 }
 
-header h1 sup {
-  font-size: 0.6rem;
+.navbar-brand sup {
+  font-size: 0.5rem;
   vertical-align: super;
 }
 
-header nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 1.25rem;
-  font-size: 1.25rem;
+.nav-link {
+  color: rgba(0, 0, 0, 1) !important;
+  font-size: 1.25rem !important;
 }
 
-.hero__banner {
-  height: 23vh;
-  overflow: hidden;
-  position: relative;
-}
-
-header img {
-  width: 100%;
-  position: absolute;
-  top: -340px;
-}
-
-.profile {
-  height: 5rem;
-  width: 88%;
-  margin: 0.3rem auto 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.profile__img,
-.profile__text {
-  display: inline-block;
-  vertical-align: middle;
+.container {
+  width: 85% !important;
 }
 
 .profile__img {
-  height: 4rem;
   width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.profile__img img {
+.circular {
+  /* width: 100%; */
+  /** esta propiedad deja cortada
+   ** la imagen, porque su relación
+   ** de aspecto no es 1:1. Para 
+   ** evitar el problema debo configurar
+   ** el height: 100% para que se considere
+   ** toda su altura (lado más corto) y se 
+   ** elimine el ancho innecesario */
   height: 100%;
-}
-
-.profile__text {
-  margin-left: 1.5rem;
-}
-.profile__text p {
-  margin: 0;
-}
-
-.profile__text--name {
-  font-size: 1.5rem;
-  font-weight: bold; 
-  line-height: 1.5rem;
-}
-
-.profile__text--followers {
-  color: rgba(0,0,0,0.5)
-}
-
-.btn {
-  color: white;
-  padding: 0.25rem 1rem;
-  border-radius: 0;
-  margin-left: 0.5rem;
-  border: none;
-  font-size: 1rem;
-}
-
-.btn__message {
-  background: lightblue;
-}
-
-.btn__follow {
-  background: rgb(245, 119, 144);
-}
-
-.separador {
-  margin-top: 0.1rem;
-  opacity: 0.25;
-}
-
-.section__videos {
-  width: 88%;
-  margin: 2rem auto 0;
-}
-
-.section__videos h4 {
-  margin-bottom: 2rem;
-}
-.container {
-  width: 100%;
-  margin: 0;
-}
-
-.card {
-  border: none; /* grid aplica default border */
-  margin-bottom: 1rem;
-}
-
-.card__img {
-  width: 100%;
-}
-
-.card__title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  line-height: 1.4rem;
-  margin: 1rem 0 0.5rem 0;
-}
-
-.card__text {
-  color: rgba(0,0,0,0.6)}
-
-
+  display: block; 
+  object-fit: fill;
+} 

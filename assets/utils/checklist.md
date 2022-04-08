@@ -2,21 +2,18 @@
 
 Descripción corta de los objetivos del desafío.
 
-|Estado|Requisito|
-|:-------:|:------:|
-|OK|1. |
-|...|2. |
-||3. |
-||4. |
-||5. |
-||6. |
-||7. |
+|Estado|N°|Requisito|
+|:-------:|:------:|:------:|
+| ? |1| Definir flujo de elementos considerando diseño responsivo|
+| OK |2| Usar CSS grid para la grilla de videos populares|
+| OK |3| Usar media queries para crear breakpoints|
+
 
 * **Tipografía** 
-  * Open Sans 400 700
+  * por defecto de Bootstrap
+  * Lemon Milk para el logo
 * **Colores:**
-  * Si hubiera alguno
-  * ...
+  * por defecto en Bootstrap
 * **Íconos:**
   * <i class="fa-solid fa-magnifying-glass"></i>
   * <i class="fa-solid fa-video"></i>
@@ -24,5 +21,7 @@ Descripción corta de los objetivos del desafío.
   * <i class="fa-regular fa-bell"></i>
   * <i class="fa-solid fa-bars"></i>
 
-* Enlace a [maqueta](https://xd.adobe.com/spec/dcf92897-39ba-4e9a-4d25-af16b55e2c78-aac8/grid)
+### NOTAS 
+
+- la imagen 'desktop' tiene 2000/1422
 
