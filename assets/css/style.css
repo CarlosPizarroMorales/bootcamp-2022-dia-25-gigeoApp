@@ -70,6 +70,4 @@
    ** toda su altura (lado más corto) y se 
    ** elimine el ancho innecesario */
   height: 100%;
-  display: block; 
-  object-fit: fill;
 } 
