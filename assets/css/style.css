@@ -1,16 +1,26 @@
-/** he elegido usar un template de 12
- ** columnas, para poder utilizar
- ** span de 3, 4, 6 y 12 columnas
- ** más simple y menos intensivo para el
- ** browser sería usar repeat(4, 1fr) pero
- ** entonces no podría crear 3 columnas visuales */
+/** he elegido un template de 12 columnas, 
+ ** para poder hacer span de 3, 4, 6 y 12 */
 
+/** debbuging */
+body {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+/** Estilo general del contenedor CSS grid sin Bootstrap */
 .container__grid-no-bootstrap {
-  width: 100%;
+  width: 100% !important;
   display: grid;
   gap: 1rem 2rem;
   grid-template-columns: repeat(12, 1fr);
 }
+
+/** Media queries for breakpoints */
+@media (max-width: 320px) {
+  .container__grid-no-bootstrap {
+    gap: 1rem; 
+  }
+} 
 
 @media (max-width: 767px) {
   .card-grid {
@@ -48,6 +58,7 @@
   }
 }
 
+/** estilos generales */
 .navbar-brand {
   font-family: 'LEMON MILK', sans-serif;
 }
@@ -62,23 +73,20 @@
   font-size: 1.25rem !important;
 }
 
-/* .container {
-  width: 85% !important;
-} */
-
+/** banner centrado sin más atados */
 .hero__banner {
   background: url('../img/image-banner.png');
   background-size: cover;
   background-position:center;
 }
 
+/** imagen redonda a partir de foto rectangular */
 .profile__img {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   overflow: hidden;
 }
-
 .circular {
   /* width: 100%; */
   /** esta propiedad deja cortada
@@ -94,8 +102,18 @@
 .btn { 
   border-radius: 0;
   padding: 0.125rem 0.5rem;
-  /* font-size: 0.8rem */
   font-weight: 300;
+}
+.btn-danger {
+  padding: 0.125rem 1rem;
+}
+
+/** Estilos generales para la grilla */
+/*! esta regla es importante para que */
+/*! las imágenes de la grilla se comporten ok */
+.card-grid img {
+  width: 100% !important;
+  display: block !important;
 }
 
 /** mis media queries originales
@@ -104,29 +122,3 @@
  ** solo un breakpoint. Las dejo como 
  ** testimonio y para refactorizar 
  ** pronto al retomar grid */
-
-/*
-@media (min-width: 1600px){
-  .card-grid {
-    grid-column: span 3;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1599px) {
-  .card-grid {
-    grid-column: span 4;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .card-grid {
-    grid-column: span 6;
-  }
-}
-
-@media (max-width: 767px) {
-  .card-grid {
-    grid-column: span 12;
-  }
-}
-*/
